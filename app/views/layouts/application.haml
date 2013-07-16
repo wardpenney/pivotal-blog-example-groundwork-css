@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %title Rails Prototyping Stack
+    = stylesheet_link_tag    "http://fonts.googleapis.com/css?family=Quicksand:300,400,700|Josefin+Slab:400,600,400italic,600italic", :media => "all"
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+%body
+  %header.container-fluid
+    .row-fluid
+      %nav.navbar.navbar-fixed-top
+        .navbar-inner
+          =link_to 'Home', root_url, :class => 'brand'
+          %ul.nav
+            %li{:class => request.path == "/" ? "active" : ""}
+              = link_to 'Wherever, son', "#"
+            %li.divider-vertical
+  = yield
+  %footer
+  .background-shade

@@ -1,0 +1,20 @@
+body
+  margin: 0
+  font-family: $baseFontFamily
+  font-size: $baseFontSize
+  line-height: $baseLineHeight
+  color: $textColor
+  background-color: $bodyBackground
+  > .container-fluid,
+  > .container
+    position: relative
+    z-index: $z-content
+
+.background-shade
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  +gradient-radial($c-you-look-pale, darken($c-you-look-pale, 15%))
+  z-index: $z-background
