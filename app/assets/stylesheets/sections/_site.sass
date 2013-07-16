@@ -1,0 +1,17 @@
+body
+  margin: 0
+  background-color: $c-fall-wash
+  > .container-fluid,
+  > .container
+    position: relative
+    z-index: $z-content
+
+.background-shade
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  p
+  +background(radial-gradient($c-you-look-pale, darken($c-you-look-pale, 15%)))
+  z-index: $z-background
