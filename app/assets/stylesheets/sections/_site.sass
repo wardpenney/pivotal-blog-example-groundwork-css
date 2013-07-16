@@ -12,7 +12,6 @@ body
   left: 0
   right: 0
   bottom: 0
-  p
   +background(radial-gradient($c-you-look-pale, darken($c-you-look-pale, 15%)))
   z-index: $z-background
 
@@ -22,3 +21,7 @@ body
   border: 1px solid darken(cornflowerblue, 7%)
   height: 50px
   +border-radius(8px)
+
+.main-body
+  @extend %six
+  @extend %sevenths
