@@ -7,15 +7,6 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
 %body
-  %header.container-fluid
-    .row-fluid
-      %nav.navbar.navbar-fixed-top
-        .navbar-inner
-          =link_to 'Home', root_url, :class => 'brand'
-          %ul.nav
-            %li{:class => request.path == "/" ? "active" : ""}
-              = link_to 'Wherever, son', "#"
-            %li.divider-vertical
-  = yield
-  %footer
+  .container
+    = yield
   .background-shade
